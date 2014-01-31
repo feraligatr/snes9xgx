@@ -2564,6 +2564,9 @@ void CMemory::InitROM (void)
 		ROMFramesPerSecond = 60;
 	}
 
+	Settings.FrameTime *= 2;
+	ROMFramesPerSecond /= 2;
+
 	// truncate cart name
 	ROMName[ROM_NAME_LEN - 1] = 0;
 	if (strlen(ROMName))
